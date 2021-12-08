@@ -773,14 +773,18 @@ const randomGUID = () => {
     return guid
 }
 
-const attachMutationObserver = () => {
+const isSimpsonsPlaying = () => {
+    const media = document.querySelectorAll(".title-field");
+    return (media.length > 0) && media[0].innerHTML == "심슨 가족"
+}
 
+const attachMutationObserver = () => {
     if (document_observer) {
         return;
     }
     document_observer = new MutationObserver(() => {
         const media = document.querySelectorAll(".play");
-        if (media.length > 0) {
+        if (media.length > 0 && isSimpsonsPlaying()){
             if (!playlock) {
                 playlock = true
                 var guid = randomGUID()
