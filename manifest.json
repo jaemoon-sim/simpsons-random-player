@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "디즈니플러스 심슨랜덤 재생",
+    "description": "random player for simpsons via disney+",
+    "version": "1.0",
+    "icons": {
+    },
+    "content_scripts": [
+        {
+            "matches":[
+                "https://*/*"
+            ],
+            "css": ["content-style.css"],
+            "js": ["content-script.js"],
+            "run_at": "document_start"
+        }
+    ]
+}
