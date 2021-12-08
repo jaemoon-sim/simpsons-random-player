@@ -795,8 +795,6 @@ const attachMutationObserver = () => {
     });
 }
 
-// https://www.disneyplus.com/ko-kr/video/79529cd0-f1cf-4eec-8b1d-ea1e1b76043b
-// up-next-play-button
 window.addEventListener("DOMContentLoaded", () => {
     attachMutationObserver();
 })
